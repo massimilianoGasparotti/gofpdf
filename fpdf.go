@@ -720,7 +720,7 @@ func (f *Fpdf) AddPageFormat(orientationStr string, size SizeType) {
 	if f.err != nil {
 		return
 	}
-	if f.page != len(f.pages)-1 {
+	if f.page > len(f.pages)-1 {
 		f.page = len(f.pages) - 1
 	}
 	if f.state == 0 {
